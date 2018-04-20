@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 class Test extends Component {
 
   render() {
+    console.log("hiii")
     return (
       <div>Hello</div>
   );
