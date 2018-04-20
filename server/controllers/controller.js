@@ -1,8 +1,7 @@
 const yelp = require('yelp-fusion');
-require('dotenv').config();
+const Profiles = require('../models/profile-schema');
 const client = yelp.client(process.env.APIKEY);
-
-
+require('dotenv').config();
 
 exports.searchStudios = (req, res) => {
   client.search({
@@ -17,15 +16,27 @@ exports.searchStudios = (req, res) => {
   });
 };
 
-exports.listStudios = (req, res) => {
-
+exports.profileCreate = (req, res) => {
+  const newProfile = new Profiles({
+    name: req.body.name,
+    phone: req.body.phone,
+  });
+  newProfile.save()
+  .then(profile => res.send(profile))
+  .then(() => res.status(201))
+  .catch(() => {
+    res.status(400).send(
+      'Parameters not accepted'
+    );
+  });
 };
 
-// exports.getReviews = (req, res) => {
-//   console.log(req.body.alias);
-//   client.reviews('good-vibes-covent-garden-london-2').then(response => {
-//     console.log(response.jsonBody.reviews[0].text);
-//   }).catch(e => {
-//     console.log(e);
-//   });
-// };
+exports.listProfiles = (req, res) => {
+  Profiles.find()
+  .then(profiles => res.send(profiles))
+  .catch(() => {
+    res.status(500).send(
+      'SERVICE UNAVAILABLE'
+    );
+  });
+};

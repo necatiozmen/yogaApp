@@ -11,9 +11,8 @@ db.on('error', console.error.bind(console, 'Connection error:'));
 db.once('open', () => {
   console.log('Connected to database');});
 
-
-  module.exports = {
-    db,
-    Schema,
-    mongoose
-  }
+module.exports = {
+  db,
+  Schema,
+  mongoose,
+};
