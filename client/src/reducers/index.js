@@ -1,5 +1,6 @@
 // REMOVE-START
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 
 const studios = (state=[], action) => {
   switch (action.type) {
@@ -22,6 +23,7 @@ const coords = (state={}, action) => {
 const reducers = combineReducers({
   studios,
   coords,
+  form: formReducer,
 });
 
 export default reducers;

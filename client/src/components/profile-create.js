@@ -1,59 +1,58 @@
 import React from 'react';
-import TextField from 'material-ui/TextField';
-import '../App.css'
+import { Field, reduxForm, formValueSelector } from 'redux-form';
+import { connect } from 'react-redux';
+import '../App.css';
 import Header from '../views/header';
-const Profilecreate = () => (
+import {
+  Checkbox,
+  RadioButtonGroup,
+  SelectField,
+  TextField,
+  Toggle,
+  DatePicker
+} from 'redux-form-material-ui';
 
+import RaisedButton from 'material-ui/RaisedButton';
+let Profilecreate = props => {
 
+  const { handleSubmit, pristine, fullName, reset, submitting, rate } = props;
 
-  <div class = "profilecreate">
+  this.handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  this.myfunc = () => {
+      console.log(fullName.name);
+
+  }
+
+  return (
+    <form onSubmit={ handleSubmit(this.myfunc)}>
+  <div className = "profilecreate">
     <Header />
-    <TextField
-      hintText="Hint Text"
-    /><br />
-    <br />
-    <TextField
-      hintText="The hint text can be as long as you want, it will wrap."
-    /><br />
-    <TextField
-      id="text-field-default"
-      defaultValue="Default Value"
-    /><br />
-    <TextField
-      hintText="Hint Text"
-      floatingLabelText="Floating Label Text"
-    /><br />
-    <TextField
-      defaultValue="Default Value"
-      floatingLabelText="Floating Label Text"
-    /><br />
-    <TextField
-      hintText="Hint Text"
-      floatingLabelText="Fixed Floating Label Text"
-      floatingLabelFixed={true}
-    /><br />
-    <TextField
-      hintText="Password Field"
-      floatingLabelText="Password"
-      type="password"
-    /><br />
-    <TextField
-      hintText="MultiLine with rows: 2 and rowsMax: 4"
-      multiLine={true}
-      rows={2}
-      rowsMax={4}
-    /><br />
-    <TextField
-      hintText="Message Field"
-      floatingLabelText="MultiLine and FloatingLabel"
-      multiLine={true}
-      rows={2}
-    /><br />
-    <TextField
-      hintText="Full width"
-      fullWidth={true}
-    />
+    <Field name="name" component={TextField} hintText="name"/>
+    <Field name="surname" component={TextField} hintText="surname"/>
+    <Field name="age" component={TextField} hintText="Age"/>
+    <RaisedButton type="submit" label="Secondary" secondary={true}
+      className = "profilecreatebutton" disabled={submitting}  />
   </div>
-);
+</form>
+  );
+};
+
+Profilecreate = reduxForm({
+  form: 'profile',
+})(Profilecreate);
+
+const selector = formValueSelector('profile');
+Profilecreate = connect(
+  state => {
+    const { name, surname } = selector(state, 'name', 'surname');
+    return {
+      fullName: { name, surname },
+    };
+  }
+)(Profilecreate);
+
 
 export default Profilecreate;
