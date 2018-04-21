@@ -41,6 +41,10 @@
   text-align: center;
 }
 
+.instructors {
+  margin: 100px;
+}
+
 /* .profilecreatebutton {
   display: flex;
 align-items: center;

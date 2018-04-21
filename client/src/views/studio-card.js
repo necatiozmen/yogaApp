@@ -1,35 +1,15 @@
 import React from 'react';
 import '../index.css';
-import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import { Rating } from 'material-ui-rating';
 
-
-const test2 = async () => {
-  console.log('hi');
-}
-
-
-
-const test = async (alias) => {
-  console.log('denem',alias);
-  await fetch('http://localhost:5000/reviews', {
-      method: 'POST',
-      body: JSON.stringify({ alias: alias }),
-      headers: new Headers({
-        'Content-Type': 'application/json',
-      }),
-    })
-
-};
-
-const Deneme = (props) => (
-
+const StudioCard = (props) => (
 
   <Card style={
     {
-        "width": "25%",
-        "float" : "right"
+        width: '25%',
+        float: 'right',
 
       }
   }
@@ -70,4 +50,4 @@ const Deneme = (props) => (
   </Card>
 );
 
-export default Deneme;
+export default StudioCard;

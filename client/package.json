@@ -10,6 +10,7 @@
   "dependencies": {
     "cors": "^2.8.4",
     "google-map-react": "^0.34.0",
+    "lodash.map": "^4.6.0",
     "material-ui": "^0.20.0",
     "material-ui-next": "^1.0.0-beta.42",
     "material-ui-rating": "^1.4.1",

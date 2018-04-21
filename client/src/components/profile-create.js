@@ -22,9 +22,17 @@ let Profilecreate = props => {
   };
 
   this.myfunc = () => {
-      console.log(fullName.name);
-
-  }
+    fetch('http://localhost:5000/profilecreate', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: fullName.name,
+          surname: fullName.surname,
+          city: fullName.city, }),
+        headers: new Headers({
+          'Content-Type': 'application/json',
+        }),
+      });
+  };
 
   return (
     <form onSubmit={ handleSubmit(this.myfunc)}>
@@ -32,7 +40,7 @@ let Profilecreate = props => {
     <Header />
     <Field name="name" component={TextField} hintText="name"/>
     <Field name="surname" component={TextField} hintText="surname"/>
-    <Field name="age" component={TextField} hintText="Age"/>
+    <Field name="city" component={TextField} hintText="city"/>
     <RaisedButton type="submit" label="Secondary" secondary={true}
       className = "profilecreatebutton" disabled={submitting}  />
   </div>
@@ -47,12 +55,11 @@ Profilecreate = reduxForm({
 const selector = formValueSelector('profile');
 Profilecreate = connect(
   state => {
-    const { name, surname } = selector(state, 'name', 'surname');
+    const { name, surname, city } = selector(state, 'name', 'surname', 'city');
     return {
-      fullName: { name, surname },
+      fullName: { name, surname, city },
     };
   }
 )(Profilecreate);
-
 
 export default Profilecreate;

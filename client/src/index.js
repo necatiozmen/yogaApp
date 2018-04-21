@@ -10,6 +10,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import registerServiceWorker from './registerServiceWorker';
 import reducers from './reducers/index';
 import Profilecreate from './components/profile-create';
+import Instructors from './components/instructors';
 
 
 
@@ -23,6 +24,7 @@ ReactDOM.render(
      <BrowserRouter>
        <div>
          <Switch>
+           <Route path="/instructorlist" component = {Instructors} />
            <Route path="/profilecreate" component = {Profilecreate} />
            <Route path="/" component = {App} />
          </Switch>
