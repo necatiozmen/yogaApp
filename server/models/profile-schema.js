@@ -5,9 +5,14 @@ const profileSchema = new db.Schema({
   city: { type: String },
   language: { type: String },
   certification: { type: String },
+  gender: { type: String },
+  specialities: { type: Array },
   phone: { type: Number, default: Math.random() },
-  experience: { type: Number, default: Math.random() },
-  price: { type: Number, default: Math.random() },
+  datapicker: { type: Date },
+  experience: { type: String },
+  rate: { type: Number, default: Math.random() },
+  refId: { type: Number },
+  image: { data: Buffer, contentType: String },
 });
 
 const Profiles = db.mongoose.model('Profiles', profileSchema);
