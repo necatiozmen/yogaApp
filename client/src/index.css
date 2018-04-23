@@ -21,3 +21,19 @@ body {
   /* margin-top: 25px; */
   padding-top: 20px;
 }
+
+
+.reviewdialog {
+  color:grey;
+  width: 700px;
+  font: italic 1.2em "Fira Sans", serif;
+  text-align: center;
+  padding: 5px;
+  font-weight: 
+  /* float: left; */
+}
+
+.dialog {
+  width: 600px;
+  background:red;
+}

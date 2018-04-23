@@ -2,17 +2,16 @@ import React from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
+import { Rating } from 'material-ui-rating';
 
-/**
- * Dialog with action buttons. The actions are passed in as an array of React objects,
- * in this example [FlatButtons](/#/components/flat-button).
- *
- * You can also close this dialog by clicking outside the dialog, or with the 'Esc' key.
- */
-
-const customContentStyle = {
-  width: '100%',
-  maxWidth: 'none',
+// const customContentStyle = {
+//   width: '200vw',
+//   height: '70vh',
+//   maxWidth: 'none',
+//   background: 'green',
+// };
+const customBodyStyle = {
+  textalign:'center'
 };
 export default class ReviewDialog extends React.Component {
   state = {
@@ -33,32 +32,38 @@ export default class ReviewDialog extends React.Component {
       })
       .then(res => res.json())
       .then(res=> this.setState({ reviews: res }, () => {console.log(this.state.reviews)}))
-      .then(rewlist => this.rew = this.state.reviews.map(el => {
-          return (
-            <div key= {el.id}>{el.text}</div>
-          );
-        }))
-
-      .then(this.setState({ open: true }));
+      .then(() => this.setState({ open: true }));
     };
 
   handleClose = () => {
     this.setState({ open: false });
   };
 
+  renderReviews() {
+    return this.state.reviews.map(review => (
+      <div style={{margin:'20px'}} key= {review.id}>
+        <div style={{margin:'20px'}}>{review.user.name}</div>
+      {review.time_created}  <Rating
+                 readOnly={true}
+                 value={review.rating}
+                 max={5}
+                 onChange={(value) => console.log(`Rated with value ${value}`)}
+               />
+
+
+        {review.text}</div>
+    ));
+  }
+
   render() {
-    console.log(this.rew);
+
 
     const actions = [
+      //
+   <div className="reviewdialog">{this.renderReviews()}</div>,
 
-<div>{this.rew}</div>,
       <FlatButton
-        label="Cancel"
-        primary={true}
-        onClick={this.handleClose}
-      />,
-      <FlatButton
-        label="Submit"
+        label="OK"
         primary={true}
         keyboardFocused={true}
         onClick={this.handleClose}
@@ -70,15 +75,16 @@ export default class ReviewDialog extends React.Component {
       <div>
         <RaisedButton label="Dialog" onClick={this.handleOpen} />
         <Dialog
-          title="Dialog With Actions"
+          title="Reviews from Real Users"
           actions={actions}
           modal={false}
           // contentStyle={customContentStyle}
+          // contentClassName="dialog"
+           style={customBodyStyle}
           open={this.state.open}
           onRequestClose={this.handleClose}
         >
 
-          The actions in this window were passed in as an array of React objects.
         </Dialog>
       </div>
     );

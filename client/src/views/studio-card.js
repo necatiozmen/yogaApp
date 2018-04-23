@@ -16,9 +16,8 @@ const StudioCard = (props) => (
  expandable = {true}
   >
     <CardHeader
-      title="URL Avatar"
-      subtitle="Subtitle"
-      avatar="images/jsa-128.jpg"
+
+      avatar="https://image.flaticon.com/icons/svg/242/242185.svg"
     />
     <CardMedia
       overlay={<CardTitle title={props.names} subtitle={props.adress.city}/>}

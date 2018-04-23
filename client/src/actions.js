@@ -3,8 +3,12 @@ export const listStudios = (studios) => ({
     studios: studios,
   });
 
+// export const listCoordinates = (coordlist) => ({
+//   type: 'LIST_COORDS',
+//   coordinates: coordlist,
+// });
 
-  export const setCoord = (coords) => ({
+export const setCoord = (coords) => ({
       type: 'SET_COORDS',
       coords: coords,
     });

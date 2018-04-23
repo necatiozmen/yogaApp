@@ -20,9 +20,20 @@ const coords = (state={}, action) => {
   }
 };
 
+// const coordlist = (state={}, action) => {
+//   switch (action.type) {
+//     case 'LIST_COORDS':
+//       return action.coordinates;
+//     default:
+//       return state;
+//
+//   }
+// };
+
 const reducers = combineReducers({
   studios,
   coords,
+  // coordlist,
   form: formReducer,
 });
 
