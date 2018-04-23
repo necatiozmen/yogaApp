@@ -16,28 +16,26 @@ class InstructorList extends Component {
   fetchApi = () => {
     fetch('http://localhost:5000/listinstructors', {
         method: 'GET',
-      }).then(res => res.json())
+      })
+      .then(res => res.json())
       .then(data => this.setState({ value: data }))
-      .then(this.instructorFunc)
       .catch(e => {
         console.log(e);
       });
   };
 
-  instructorFunc = () => this.state.value.map((list) => (
-      <InstructorListItem
-        instructor = {list}
-        key ={list._id}
-      />
-    ));
-
   render() {
-    const item = this.instructorFunc();
     return (
         <div>
-          {item}
+          {this.state.value.map((list) => (
+              <InstructorListItem
+                instructor = {list}
+                key ={list._id}
+              />
+            ))
+          }
         </div>
-  );
+    );
   }
 
 }

@@ -10,3 +10,14 @@ body {
     border: 2px solid #FF9800 !important;
     background-color: #ffd699 !important;
   }
+
+.phone-icon {
+  padding-right: 15px;
+  padding-top: 10px;
+  /* margin-left: 20px; */
+}
+
+.location-icon {
+  /* margin-top: 25px; */
+  padding-top: 20px;
+}

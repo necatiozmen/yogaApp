@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import '../App.css'
 
 const StudioList = (props) => {
+  console.log(props.studios);
   const studioItems = props.studios.map((studio) => {
     return (
       <StudioListItem

@@ -8,6 +8,8 @@
     }
   },
   "dependencies": {
+    "@material-ui/icons": "^1.0.0-beta.43",
+    "axios": "^0.18.0",
     "cors": "^2.8.4",
     "google-map-react": "^0.34.0",
     "lodash.map": "^4.6.0",
@@ -18,6 +20,7 @@
     "materialize-css": "^1.0.0-beta",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-dropzone": "^4.2.9",
     "react-google-maps": "^9.4.5",
     "react-redux": "^5.0.7",
     "react-router": "^4.0.0",
@@ -26,6 +29,8 @@
     "redux": "^4.0.0",
     "redux-form": "^7.3.0",
     "redux-form-material-ui": "^4.3.4",
+    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-react": "^0.79.1",
     "yelp-fusion": "^2.0.3"
   },
   "scripts": {

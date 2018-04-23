@@ -22,6 +22,7 @@ class StudioListItem extends Component {
 
       <MuiThemeProvider>
         <StudioCard images = {studioItem.image_url}
+           isclosed = {studioItem.is_closed}
             names = {studioItem.name}
             number = {studioItem.phone}
             rating = {studioItem.rating}

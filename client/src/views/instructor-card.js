@@ -4,6 +4,17 @@ import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'm
 import FlatButton from 'material-ui/FlatButton';
 import { Rating } from 'material-ui-rating';
 
+function _arrayBufferToBase64(buffer) {
+  var binary = '';
+  var bytes = new Uint8Array(buffer);
+  var len = bytes.byteLength;
+  for (var i = 0; i < len; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+
+  return window.btoa(binary);
+}
+
 const InstructorCard = (props) => (
 
   <Card style={
@@ -13,7 +24,6 @@ const InstructorCard = (props) => (
       }
   }
  expandable = {true}
-
   >
     <CardHeader
       title="URL Avatar"
@@ -21,17 +31,14 @@ const InstructorCard = (props) => (
       avatar="images/jsa-128.jpg"
     />
     <CardMedia
-
-      overlay={<CardTitle title={props.names} subtitle={props.city}
+      overlay={<CardTitle title={`${props.names} ${props.surname}  `} subtitle={props.city}
         />}
     >
-
+     { props.image && <img src={`data:image/png;base64, ${_arrayBufferToBase64(props.image.data.data)}`} alt="" />}
     </CardMedia>
-    <CardTitle title={props.city} subtitle="Card subtitle" />
+    <CardTitle title={props.specialities} subtitle={props.experience} />
     <CardText>
-
-      {props.city}
-      {props.names}
+    Available languages {props.language}
     </CardText>
     <CardActions  >
       <FlatButton  label="Action1"  />
