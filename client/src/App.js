@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 import logo from './logo.svg';
 import './App.css';
 import StudioList from './containers/studio-list';
@@ -10,32 +9,29 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Header from './views/header';
 
 
-
-
 class App extends Component {
 
   render() {
 
     return (
+      <div className = 'App'>
+        <Header />
 
-
-        <div className="App">
-          <Header />
+        <div style={{flex:1, display: 'flex', alignItems: 'stretch'}}>
+          <div style={{flex: 1, overflowY: 'scroll'}}>
+            <SearchBar  />
+            <StudioList />
+          </div>
           <MyMapComponent />
-          <SearchBar  />
-          <StudioList />
         </div>
+      </div>
 
 
-
+              //
+              // <img />
+              //
     );
   }
 }
 
 export default App;
-{/* <div className="App">
-  <Header />
-  <MyMapComponent />
-  <SearchBar  />
-  <StudioList />
-</div> */}

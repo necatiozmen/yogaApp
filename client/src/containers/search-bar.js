@@ -29,18 +29,9 @@ class SearchBar extends Component {
 
   render () {
     return (
-   <form onSubmit={ this.handleSubmit }>
-    <input value={this.state.value} onChange = {this.handleChange } style={{width:400, height:30 }} ></input>
+   <form onSubmit={ this.handleSubmit } style={{margin: 20}}>
+    <input value={this.state.value} onChange = {this.handleChange } style={{width:900, height:30 }} ></input>
   </form>
-  // <SearchBar1
-  //    value={this.state.value}
-  //    onChange={this.handleChange}
-  //    onRequestSearch={this.handleSubmit}
-  //    style={{
-  //      margin: '0 auto',
-  //      maxWidth: 800
-  //    }}
-  //  />
     );
   }
 }

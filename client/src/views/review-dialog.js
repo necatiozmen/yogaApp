@@ -3,15 +3,10 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import { Rating } from 'material-ui-rating';
+import {lime500} from 'material-ui/styles/colors';
 
-// const customContentStyle = {
-//   width: '200vw',
-//   height: '70vh',
-//   maxWidth: 'none',
-//   background: 'green',
-// };
 const customBodyStyle = {
-  textalign:'center'
+  textalign:'center',
 };
 export default class ReviewDialog extends React.Component {
   state = {
@@ -31,7 +26,7 @@ export default class ReviewDialog extends React.Component {
         }),
       })
       .then(res => res.json())
-      .then(res=> this.setState({ reviews: res }, () => {console.log(this.state.reviews)}))
+      .then(res=> this.setState({ reviews: res }))
       .then(() => this.setState({ open: true }));
     };
 
@@ -49,8 +44,6 @@ export default class ReviewDialog extends React.Component {
                  max={5}
                  onChange={(value) => console.log(`Rated with value ${value}`)}
                />
-
-
         {review.text}</div>
     ));
   }
@@ -73,13 +66,10 @@ export default class ReviewDialog extends React.Component {
 
     return (
       <div>
-        <RaisedButton label="Dialog" onClick={this.handleOpen} />
+        <RaisedButton backgroundColor={lime500} label="Reviews" onClick={this.handleOpen} />
         <Dialog
-          title="Reviews from Real Users"
           actions={actions}
           modal={false}
-          // contentStyle={customContentStyle}
-          // contentClassName="dialog"
            style={customBodyStyle}
           open={this.state.open}
           onRequestClose={this.handleClose}

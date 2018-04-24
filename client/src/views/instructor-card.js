@@ -40,6 +40,9 @@ const InstructorCard = (props) => (
     <CardText>
     Available languages {props.language}
     </CardText>
+    <CardText>
+   {props.phone}
+    </CardText>
     <CardActions  >
       <FlatButton  label="Action1"  />
       <FlatButton label="Action2" />

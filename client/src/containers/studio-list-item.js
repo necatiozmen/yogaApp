@@ -12,13 +12,13 @@ class StudioListItem extends Component {
   }
 
   sendcoor = (coords) => {
-    this.props.setCoord(this.props.studio.coordinates);
+    this.props.setCoord(this.props.studio.id);
   };
 
   render () {
     const studioItem = this.props.studio;
     return (
-     <div  onClick={this.sendcoor}>
+     <div  style={this.props.style} onClick={this.sendcoor}>
 
       <MuiThemeProvider>
         <StudioCard images = {studioItem.image_url}

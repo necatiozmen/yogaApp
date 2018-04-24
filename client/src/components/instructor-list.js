@@ -26,9 +26,14 @@ class InstructorList extends Component {
 
   render() {
     return (
-        <div>
+        <div style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          margin: 10
+        }}>
           {this.state.value.map((list) => (
               <InstructorListItem
+
                 instructor = {list}
                 key ={list._id}
               />

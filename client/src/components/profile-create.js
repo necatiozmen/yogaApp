@@ -13,15 +13,21 @@ import {
   DatePicker
 } from 'redux-form-material-ui';
 import axios from 'axios';
-
 import RaisedButton from 'material-ui/RaisedButton';
 import MenuItem from 'material-ui/MenuItem';
+import Snackbar from './snackbar';
 
 class Profilecreate extends React.Component {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+    };
+  }
   handleSubmit = (e) => {
     e.preventDefault();
   };
+
 
   myfunc = () => {
     const { fullName } = this.props;
@@ -52,9 +58,16 @@ class Profilecreate extends React.Component {
           console.log(response); // do something with the response
         });
       });
+
+          this.setState({open:true});
+
   };
 
   render() {
+    const divstyle = {
+      padding:10,
+    }
+
     const { handleSubmit, pristine, reset, submitting, rate, dispatch } = this.props;
     return (
 <form onSubmit={ handleSubmit(this.myfunc)}>
@@ -63,36 +76,45 @@ class Profilecreate extends React.Component {
       <Field name="name" component={TextField} hintText="name" />
       <Field name="surname" component={TextField} hintText="surname" />
       <Field name="city" component={TextField} hintText="city"/>
-      <Field name="certification" component={TextField} hintText="certification"/>
+      <Field name="certification" component={TextField} hintText="email"/>
       <Field name="language" component={TextField} hintText="language"/>
       <Field name="phone" component={TextField} hintText="phone"/>
-      <Field name="experience" component={RadioButtonGroup} >
-         <RadioButton value="0-2 years experience on yoga" label="0-2 year"/>
-         <RadioButton value="2-5 years experince on yoga" label="2-5 year"/>
-         <RadioButton value="5+ years experince on yoga" label="5+"/>
-       </Field>
       <Field name="rate" component={TextField} hintText="rate"/>
       <Field name="gender" component={TextField} hintText="gender"/>
       <Field name="datepicker" component={DatePicker}  format={null} hintText="avaliable dates"/>
       <Field name="specialities" component={SelectField} multiple={true} hintText="Specialities">
-      <MenuItem value="acro" primaryText="Acro"/>
-          <MenuItem value="hatha" primaryText="Hatha"/>
-          <MenuItem value="vinyasa" primaryText="Vinyasa"/>
-          <MenuItem value="kriya" primaryText="Kriya"/>
-          <MenuItem value="hot" primaryText="Hot"/>
-          <MenuItem value="yin" primaryText="Yin"/>
+          <MenuItem value="Acro" primaryText="Acro"/>
+          <MenuItem value="Hatha" primaryText="Hatha"/>
+          <MenuItem value="Vinyasa" primaryText="Vinyasa"/>
+          <MenuItem value="Kriya" primaryText="Kriya"/>
+          <MenuItem value="Hot" primaryText="Hot"/>
+          <MenuItem value="Yin" primaryText="Yin"/>
+          <MenuItem value="Ashtanga" primaryText="Ashtanga"/>
+          <MenuItem value="Kundalini" primaryText="Kundalini"/>
         </Field>
-      <RaisedButton type="submit" label="Secondary" secondary={true}
+        <div style={divstyle}>
+          Experience
+          <Field name="experience" component={RadioButtonGroup} >
+
+            <RadioButton value="0-2 years experience on yoga" label="0-2 year"/>
+            <RadioButton value="2-5 years experince on yoga" label="2-5 year"/>
+            <RadioButton value="5+ years experince on yoga" label="5+"/>
+
+          </Field>
+
+        </div>
+      <RaisedButton type="submit" label="Sign Up" secondary={true}
         className = "profilecreatebutton" disabled={submitting}  />
-        <RaisedButton
+        <RaisedButton labelStyle={{height: '20px'}}
        containerElement='label'
-       label='My Label'>
+       label='Choose Profile Picture'>
        <input type="file" onChange={(e) => {
         const image = e.target.files[0];
         dispatch(change('profile', 'image', image));
       }} />
 
     </RaisedButton>
+<Snackbar value={this.state.open} />
     </div>
   </form>
     );

@@ -4,12 +4,12 @@ import FontIcon from 'material-ui/FontIcon';
 import MapsPersonPin from 'material-ui/svg-icons/maps/person-pin';
 import { Link } from 'react-router-dom';
 
-
+import '../App.css'
 
 
 const Header = () => (
 
-  <Tabs>
+  <Tabs className="tabs-container">
 
     <Tab
       icon={<FontIcon className="material-icons">YOGA</FontIcon>}

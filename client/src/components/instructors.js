@@ -9,10 +9,10 @@ class Instructors extends Component {
 
   render() {
     return (
-        <div >
+        <div style ={{backgroundColor:'#F5F5F5'}}>
           <Header />
-          <div className="instructors"></div>
-          <InstructorList  />
+          <InstructorList
+           />
         </div>
     );
   }
