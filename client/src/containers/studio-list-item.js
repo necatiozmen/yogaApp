@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { connect } from 'react-redux';
 import { setCoord } from '../actions';
-import Deneme from '../views/deneme';
-import Deneme2 from '../views/deneme2';
+import StudioCard from '../views/studio-card';
 import '../index.css';
 
 class StudioListItem extends Component {
@@ -13,23 +12,17 @@ class StudioListItem extends Component {
   }
 
   sendcoor = (coords) => {
-    this.props.setCoord(this.props.studio.coordinates);
+    this.props.setCoord(this.props.studio.id);
   };
 
   render () {
     const studioItem = this.props.studio;
     return (
-     <div  onClick={this.sendcoor}>
-          {/* <img className="img-thumbnail" src={studioItem.image_url}/> */}
-      {/* <div className="media-body">
-           <div className="media-heading"> {studioItem.alias}</div>
-        </div> */}
-      <MuiThemeProvider>
+     <div  style={this.props.style} onClick={this.sendcoor}>
 
-        {/* <Deneme2 images = {studioItem.image_url}
-            names = {studioItem.name}
-        /> */}
-        <Deneme images = {studioItem.image_url}
+      <MuiThemeProvider>
+        <StudioCard images = {studioItem.image_url}
+           isclosed = {studioItem.is_closed}
             names = {studioItem.name}
             number = {studioItem.phone}
             rating = {studioItem.rating}

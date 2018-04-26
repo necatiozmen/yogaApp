@@ -1,5 +1,6 @@
 // REMOVE-START
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 
 const studios = (state=[], action) => {
   switch (action.type) {
@@ -19,9 +20,21 @@ const coords = (state={}, action) => {
   }
 };
 
+// const coordlist = (state={}, action) => {
+//   switch (action.type) {
+//     case 'LIST_COORDS':
+//       return action.coordinates;
+//     default:
+//       return state;
+//
+//   }
+// };
+
 const reducers = combineReducers({
   studios,
   coords,
+  // coordlist,
+  form: formReducer,
 });
 
 export default reducers;
