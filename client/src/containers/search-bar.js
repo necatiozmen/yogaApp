@@ -30,11 +30,12 @@ class SearchBar extends Component {
   render () {
     return (
    <form onSubmit={ this.handleSubmit } style={{margin: 20}}>
-    <input value={this.state.value} onChange = {this.handleChange } style={{width:900, height:30 }} ></input>
+    <input value={this.state.value} onChange = {this.handleChange } placeHolder={'Please type the city name...'} style={{width:900, height:50 ,fontSize: 20,border: "2px solid #B2DFDB"}} ></input>
   </form>
     );
   }
 }
+
 
 const mapDispatchToProps = (dispatch) => ({
   listStudios: (studios) => dispatch(listStudios(studios)),

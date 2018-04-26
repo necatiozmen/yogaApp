@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import '../App.css';
 import Header from '../views/header';
 import { RadioButton } from 'material-ui/RadioButton';
+
 import {
   Checkbox,
   RadioButtonGroup,
@@ -24,10 +25,10 @@ class Profilecreate extends React.Component {
       open: false,
     };
   }
+
   handleSubmit = (e) => {
     e.preventDefault();
   };
-
 
   myfunc = () => {
     const { fullName } = this.props;
@@ -59,14 +60,14 @@ class Profilecreate extends React.Component {
         });
       });
 
-          this.setState({open:true});
+    this.setState({ open: true });
 
   };
 
   render() {
     const divstyle = {
-      padding:10,
-    }
+      padding: 10,
+    };
 
     const { handleSubmit, pristine, reset, submitting, rate, dispatch } = this.props;
     return (
@@ -105,7 +106,7 @@ class Profilecreate extends React.Component {
         </div>
       <RaisedButton type="submit" label="Sign Up" secondary={true}
         className = "profilecreatebutton" disabled={submitting}  />
-        <RaisedButton labelStyle={{height: '20px'}}
+        <RaisedButton labelStyle={{ height: '20px' }}
        containerElement='label'
        label='Choose Profile Picture'>
        <input type="file" onChange={(e) => {
@@ -129,10 +130,10 @@ Profilecreate = reduxForm({
 const selector = formValueSelector('profile');
 Profilecreate = connect(
   state => {
-    const { name, surname, city, image, specialities, certification, language, experience, rate, datepicker, gender,phone}
-     = selector(state, 'name', 'surname', 'city', 'image','specialities', 'certification', 'language', 'experience', 'rate', 'datepicker', 'gender','phone');
+    const { name, surname, city, image, specialities, certification, language, experience, rate, datepicker, gender, phone }
+     = selector(state, 'name', 'surname', 'city', 'image', 'specialities', 'certification', 'language', 'experience', 'rate', 'datepicker', 'gender', 'phone');
     return {
-      fullName: { name, surname, city, image, specialities, certification, language, experience, rate, datepicker, gender,phone},
+      fullName: { name, surname, city, image, specialities, certification, language, experience, rate, datepicker, gender, phone },
     };
   }
 )(Profilecreate);

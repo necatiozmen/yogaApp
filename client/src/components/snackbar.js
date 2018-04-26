@@ -10,6 +10,7 @@ export default class SnackbarExampleSimple extends React.Component {
       open: false,
     };
   }
+
   render() {
     return (
       <div>

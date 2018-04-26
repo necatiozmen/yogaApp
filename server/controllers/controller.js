@@ -9,6 +9,7 @@ exports.searchStudios = (req, res) => {
   client.search({
     term: 'yoga',
     location: req.body.location,
+    limit: 40,
   })
   .then(response => {
     res.send(response.jsonBody.businesses);
