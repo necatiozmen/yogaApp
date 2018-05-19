@@ -8,7 +8,6 @@ class InstructorList extends Component {
       value: [],
     };
     this.fetchApi();
-
   }
 
   fetchApi = () => {

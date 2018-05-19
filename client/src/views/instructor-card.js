@@ -34,7 +34,8 @@ const InstructorCard = (props) => (
       overlay={<CardTitle title={`${props.names} ${props.surname}  `} subtitle={props.city}
         />}
     >
-     { props.image && <img src={`data:image/png;base64, ${_arrayBufferToBase64(props.image.data.data)}`} alt="" />}
+     { props.image && <img src={`data:image/png;base64,
+        ${_arrayBufferToBase64(props.image.data.data)}`} alt="" />}
     </CardMedia>
     <CardTitle title={props.specialities} subtitle={props.experience} />
     <CardText>
