@@ -4,17 +4,38 @@
  <img width= "200px" src="https://cdn.pixabay.com/photo/2017/08/16/17/16/flower-of-life-2648527__340.png"></img>
 </div>
 
+
+
 ## About
 yogapp is a app that helps people to find yoga studios and personel yoga instructors in 220 cities all around the world.
 
 
+
 ## Getting Started
+
+
+<div align="center">
+ <img src="https://preview.ibb.co/dEJiBT/download.png" alt="download">
+ </div>
+ 
+<hr>
+
+<div align="center">
+ <img src="https://preview.ibb.co/hDpJd8/download_1.png" alt="download_1" border="0">
+</div>
+
+<hr>
 
 Clone and install the dependencies for the repo:
 
 `git clone https://github.com/necatiozmen/yogaapp.git`
 
+
+
+
+
 ### Client
+
 
 Go to the choosen app directory on the CLI then run this command into client folder
 
@@ -23,6 +44,8 @@ Go to the choosen app directory on the CLI then run this command into client fol
 After installing dependecies run this command -
 
 `npm start`
+
+
 
 ### Server
 
@@ -65,6 +88,8 @@ After setting env file run this command on the CLI for start server running :
 * **Google Map API** - Google map
 * **Node / Express**- Back end web framework
 * **MongoDB / Mongoose** - Database storage for Node
+
+
 
 ## Author
 
