@@ -52,7 +52,7 @@ mongoURL=<mongodb host>
 
 Change the values accordingly to yours.
  
-After setting env file run this commond to start server running :
+After setting env file run this command on the CLI for start server running :
 
 `nodemon app.js`
 
