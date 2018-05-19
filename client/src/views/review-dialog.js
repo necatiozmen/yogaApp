@@ -3,10 +3,10 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import { Rating } from 'material-ui-rating';
-import {lime500} from 'material-ui/styles/colors';
+import { lime500 } from 'material-ui/styles/colors';
 
 const customBodyStyle = {
-  textalign:'center',
+  textalign: 'center',
 };
 export default class ReviewDialog extends React.Component {
   state = {
@@ -36,8 +36,8 @@ export default class ReviewDialog extends React.Component {
 
   renderReviews() {
     return this.state.reviews.map(review => (
-      <div style={{margin:'20px'}} key= {review.id}>
-        <div style={{margin:'20px'}}>{review.user.name}</div>
+      <div style={{ margin: '20px' }} key= {review.id}>
+        <div style={{ margin: '20px' }}>{review.user.name}</div>
       {review.time_created}  <Rating
                  readOnly={true}
                  value={review.rating}
@@ -50,11 +50,8 @@ export default class ReviewDialog extends React.Component {
 
   render() {
 
-
     const actions = [
-      //
    <div className="reviewdialog">{this.renderReviews()}</div>,
-
       <FlatButton
         label="OK"
         primary={true}
@@ -74,7 +71,6 @@ export default class ReviewDialog extends React.Component {
           open={this.state.open}
           onRequestClose={this.handleClose}
         >
-
         </Dialog>
       </div>
     );

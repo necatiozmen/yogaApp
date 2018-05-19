@@ -6,11 +6,6 @@ import StudioCard from '../views/studio-card';
 import '../index.css';
 
 class StudioListItem extends Component {
-  constructor(props) {
-    super(props);
-
-  }
-
   sendcoor = (coords) => {
     this.props.setCoord(this.props.studio.id);
   };
@@ -19,7 +14,6 @@ class StudioListItem extends Component {
     const studioItem = this.props.studio;
     return (
      <div  style={this.props.style} onClick={this.sendcoor}>
-
       <MuiThemeProvider>
         <StudioCard images = {studioItem.image_url}
            isclosed = {studioItem.is_closed}

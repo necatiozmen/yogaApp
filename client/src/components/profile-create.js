@@ -130,10 +130,13 @@ Profilecreate = reduxForm({
 const selector = formValueSelector('profile');
 Profilecreate = connect(
   state => {
-    const { name, surname, city, image, specialities, certification, language, experience, rate, datepicker, gender, phone }
-     = selector(state, 'name', 'surname', 'city', 'image', 'specialities', 'certification', 'language', 'experience', 'rate', 'datepicker', 'gender', 'phone');
+    const { name, surname, city, image, specialities, certification,
+       language, experience, rate, datepicker, gender, phone, }
+     = selector(state, 'name', 'surname', 'city', 'image', 'specialities', 'certification',
+     'language', 'experience', 'rate', 'datepicker', 'gender', 'phone');
     return {
-      fullName: { name, surname, city, image, specialities, certification, language, experience, rate, datepicker, gender, phone },
+      fullName: { name, surname, city, image, specialities, certification,
+        language, experience, rate, datepicker, gender, phone, },
     };
   }
 )(Profilecreate);

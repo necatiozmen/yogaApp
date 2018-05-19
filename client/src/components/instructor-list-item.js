@@ -12,34 +12,20 @@ class InstructorListItem extends Component {
     const instructorItem = this.props.instructor;
     return (
      <div>
-       {/* <MuiThemeProvider>
-         <InstructorCard
-             names = {instructorItem.name}
-             surname = {instructorItem.surname}
-             city = {instructorItem.city}
-             image= {instructorItem.image}
-             language ={instructorItem.language}
-             specialities = {instructorItem.specialities}
-             phone={instructorItem.phone}
-             avaliabledate = {instructorItem.datapicker}
-             experience ={instructorItem.experience}
-             rate = {instructorItem.rate}
-         />
-        </MuiThemeProvider> */}
-            <MuiThemeProvider>
-        <PaperExampleSimple
-          names = {instructorItem.name}
-          surname = {instructorItem.surname}
-          city = {instructorItem.city}
-          image= {instructorItem.image}
-          certification= {instructorItem.certification}
-          language ={instructorItem.language}
-          specialities = {instructorItem.specialities}
-          phone={instructorItem.phone}
-          avaliabledate = {instructorItem.datapicker}
-          experience ={instructorItem.experience}
-          rate = {instructorItem.rate} />
-            </MuiThemeProvider>
+        <MuiThemeProvider>
+            <PaperExampleSimple
+              names = {instructorItem.name}
+              surname = {instructorItem.surname}
+              city = {instructorItem.city}
+              image= {instructorItem.image}
+              certification= {instructorItem.certification}
+              language ={instructorItem.language}
+              specialities = {instructorItem.specialities}
+              phone={instructorItem.phone}
+              avaliabledate = {instructorItem.datapicker}
+              experience ={instructorItem.experience}
+              rate = {instructorItem.rate} />
+        </MuiThemeProvider>
      </div>
     );
   }

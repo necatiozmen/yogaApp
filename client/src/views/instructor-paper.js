@@ -3,9 +3,9 @@ import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
 import CommunicationCall from 'material-ui/svg-icons/communication/call';
 import CommunicationEmail from 'material-ui/svg-icons/communication/email';
-import {indigo500} from 'material-ui/styles/colors';
-import { Place  } from '@material-ui/icons';
-import Chip from './profinfo.js'
+import { indigo500 } from 'material-ui/styles/colors';
+import { Place } from '@material-ui/icons';
+import Chip from './profinfo.js';
 function _arrayBufferToBase64(buffer) {
   var binary = '';
   var bytes = new Uint8Array(buffer);
@@ -21,30 +21,27 @@ const style = {
   height: 300,
   width: 600,
   margin: 50,
-   borderRadius: "8px 8px 8px 70px",
-   border: "2px solid #B2DFDB",
+  borderRadius: '8px 8px 8px 70px',
+  border: '2px solid #B2DFDB',
   display: 'inline-block',
 
 };
 const imgstyle = {
-
-  float:'left',
-  marginRight:10
-
-
-}
+  float: 'left',
+  marginRight: 10,
+};
 const infostyle = {
-float:'left',
+  float: 'left',
 
-}
+};
 
 const PaperExampleSimple = (props) => (
 
     <Paper style={style} zDepth={3} rounded={false} >
       <div  style={{
-        margin:25}}>
+        margin: 25, }}>
         <Avatar style={{
-          margin:20}}
+          margin: 20, }}
          src={`data:image/png;base64,
             ${_arrayBufferToBase64(props.image.data.data)}`}
          size={200}

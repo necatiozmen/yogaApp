@@ -8,15 +8,13 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Header from './views/header';
 import CitySearcName from './components/city-search-name';
 
-
 class App extends Component {
-
   render() {
     return (
       <div className = 'App'>
         <Header />
-        <div style={{flex:1, display: 'flex', alignItems: 'stretch'}}>
-          <div style={{flex: 1, overflowY: 'scroll'}}>
+        <div style={{ flex: 1, display: 'flex', alignItems: 'stretch' }}>
+          <div style={{ flex: 1, overflowY: 'scroll' }}>
             <SearchBar  />
             <CitySearcName />
             <StudioList />
@@ -28,5 +26,4 @@ class App extends Component {
   }
 }
 
-
-  export default App;
+export default App;

@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import InstructorListItem from './instructor-list-item';
-// const map = require('lodash.map');
 
 class InstructorList extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       value: [],
     };
@@ -29,11 +27,10 @@ class InstructorList extends Component {
         <div style={{
           display: 'flex',
           flexWrap: 'wrap',
-          margin: 10
+          margin: 10,
         }}>
           {this.state.value.map((list) => (
               <InstructorListItem
-
                 instructor = {list}
                 key ={list._id}
               />

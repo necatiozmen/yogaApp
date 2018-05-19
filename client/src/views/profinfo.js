@@ -5,28 +5,24 @@ import Chip from 'material-ui/Chip';
 import FontIcon from 'material-ui/FontIcon';
 import SvgIconFace from 'material-ui/svg-icons/action/face';
 import SvgIconRoom from 'material-ui/svg-icons/action/room';
-import { Place , LocalPhone, Email} from '@material-ui/icons';
+import { Place, LocalPhone, Email } from '@material-ui/icons';
 import SvgIconBluron from 'material-ui/svg-icons/action/grade';
 import Money from 'material-ui/svg-icons/action/payment';
 import SvgIconAcc from 'material-ui/svg-icons/action/fingerprint';
-import {blue300,pink200,purple100,red100
-,
- indigo900,yellowA700,teal50,cyan100
+import { blue300, pink200, purple100, red100,
+ indigo900, yellowA700, teal50, cyan100
 
 } from 'material-ui/styles/colors';
 
 const styles = {
   chip: {
     margin: 10,
-
   },
   wrapper: {
     display: 'flex',
     flexWrap: 'wrap',
   },
 };
-
-
 
 class ChipExampleSimple extends Component {
   constructor(props) {
@@ -55,8 +51,8 @@ class ChipExampleSimple extends Component {
 
 
         <Chip
-          backgroundColor={teal50
-  }  style={styles.chip}
+          backgroundColor={teal50}
+          style={styles.chip}
         >
           <Avatar color="#444" icon={<SvgIconBluron />} />
           {this.props.experience}
@@ -75,7 +71,6 @@ class ChipExampleSimple extends Component {
           backgroundColor={teal50
   }  style={styles.chip}
         >
-        {/* mail */}
           <Avatar color="#444" icon={<Email/>} />
           {this.props.certification}
         </Chip>
@@ -91,7 +86,7 @@ class ChipExampleSimple extends Component {
         <Chip backgroundColor={teal50
 } style={styles.chip}>
           <Avatar size={32}>pro</Avatar>
-          {this.props.specialities.map((el,key,col) => col[key+1] ? `${el}-` : `${el}`)}
+          {this.props.specialities.map((el, key, col) => col[key + 1] ? `${el}-` : `${el}`)}
         </Chip>
 
       </div>

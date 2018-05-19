@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { listStudios } from '../actions';
 // import SearchBar1 from 'material-ui-search-bar'
 
-
 class SearchBar extends Component {
   state = {
       value: '',
@@ -29,17 +28,19 @@ class SearchBar extends Component {
 
   render () {
     return (
-   <form onSubmit={ this.handleSubmit } style={{margin: 20}}>
-    <input value={this.state.value} onChange = {this.handleChange } placeHolder={'Please type the city name...'} style={{width:900, height:50 ,fontSize: 20,border: "2px solid #B2DFDB"}} ></input>
+   <form onSubmit={ this.handleSubmit } style={{ margin: 20 }}>
+    <input value={this.state.value}
+      onChange = {this.handleChange }
+      placeHolder={'Please type the city name...'}
+      style={{ width: 900, height: 50, fontSize: 20, border: '2px solid #B2DFDB' }} >
+    </input>
   </form>
     );
   }
 }
 
-
 const mapDispatchToProps = (dispatch) => ({
   listStudios: (studios) => dispatch(listStudios(studios)),
-  // listCoordinates: (coordlist) =>dispatch(listCoordinates(coordlist)),
 });
 
 export default connect(null, mapDispatchToProps)(SearchBar);

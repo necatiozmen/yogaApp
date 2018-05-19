@@ -9,8 +9,7 @@ import ReviewDialog from './review-dialog';
 const StudioCard = (props) => (
 
   <Card>
-    <CardHeader style={{left:50}}
-
+    <CardHeader style={{ left: 50 }}
       avatar="https://neuevision.files.wordpress.com/2011/04/blumelebens-1.gif"
     />
     <CardMedia

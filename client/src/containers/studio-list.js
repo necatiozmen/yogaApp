@@ -3,14 +3,13 @@ import StudioListItem from './studio-list-item';
 import { connect } from 'react-redux';
 import '../App.css';
 
-const EmptyList = (props) => {
-  return (
-      <div style={{display:'inline-grid'}}>
+const EmptyList = (props) =>
+    (
+      <div style={{ display: 'inline-grid' }}>
       <img src="https://preview.ibb.co/mmiDZH/main1.png" alt="main1" />
       <img style={{ width: '40vw' }} src="https://preview.ibb.co/czZ0Wx/mandala1.jpg" alt="main2" />
       </div>
     );
-};
 
 const StudioList = (props) => {
   const studioItems = props.studios.map(studio => {
@@ -47,7 +46,6 @@ const StudioList = (props) => {
 
 const mapStateToProps = (state) => ({
     studios: state.studios,
-    // Map your state to props
   });
 
 export default connect(mapStateToProps, null)(StudioList);
