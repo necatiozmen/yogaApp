@@ -7,7 +7,7 @@
 
 
 ## About
-yogapp is a app that helps people to find yoga studios and personel yoga instructors in 220 cities all around the world.
+Yogapp helps people to find yoga studios and personel yoga instructors in 220 cities all around the world.
 
 
 
@@ -17,7 +17,7 @@ yogapp is a app that helps people to find yoga studios and personel yoga instruc
 <div align="center">
  <img src="https://preview.ibb.co/dEJiBT/download.png" alt="download">
  </div>
- 
+
 <hr>
 
 <div align="center">
@@ -54,7 +54,7 @@ Go to server folder and run -
 `npm install`
 
 
-Make sure you have an instance of MongoDB working on your local machine or remote server. 
+Make sure you have an instance of MongoDB working on your local machine or remote server.
 
 You should get your own yelp fusion APIKEY from -
 https://www.yelp.com/fusion
@@ -74,13 +74,13 @@ mongoURL=<mongodb host>
 </div>
 
 Change the values accordingly to yours.
- 
+
 After setting env file run this command on the CLI for start server running :
 
 `nodemon app.js`
 
 
-## Tech Stack 
+## Tech Stack
 
 * **React** - Front end library for building user interfaces
 * **Redux** - Storage to share data inside the app
