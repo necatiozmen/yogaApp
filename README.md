@@ -1,7 +1,7 @@
 
 
 <div align="center">
- <img width= "200px" src="https://preview.ibb.co/no0DD8/logo01.png" ></img>
+ <img width= "400px" src="https://preview.ibb.co/no0DD8/logo01.png" ></img>
 </div>
 
 <!-- <a href="https://ibb.co/dB2h6T"><img src="https://preview.ibb.co/no0DD8/logo01.png" alt="logo01" border="0"></a>
