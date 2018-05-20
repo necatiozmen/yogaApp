@@ -3,8 +3,8 @@ import { Field, reduxForm, formValueSelector, change } from 'redux-form';
 import { connect } from 'react-redux';
 import '../App.css';
 import Header from '../views/header';
+import axios from 'axios';
 import { RadioButton } from 'material-ui/RadioButton';
-
 import {
   Checkbox,
   RadioButtonGroup,
@@ -13,7 +13,6 @@ import {
   Toggle,
   DatePicker
 } from 'redux-form-material-ui';
-import axios from 'axios';
 import RaisedButton from 'material-ui/RaisedButton';
 import MenuItem from 'material-ui/MenuItem';
 import Snackbar from './snackbar';
@@ -96,13 +95,10 @@ class Profilecreate extends React.Component {
         <div style={divstyle}>
           Experience
           <Field name="experience" component={RadioButtonGroup} >
-
             <RadioButton value="0-2 years experience on yoga" label="0-2 year"/>
             <RadioButton value="2-5 years experince on yoga" label="2-5 year"/>
             <RadioButton value="5+ years experince on yoga" label="5+"/>
-
           </Field>
-
         </div>
       <RaisedButton type="submit" label="Sign Up" secondary={true}
         className = "profilecreatebutton" disabled={submitting}  />
@@ -112,15 +108,15 @@ class Profilecreate extends React.Component {
        <input type="file" onChange={(e) => {
         const image = e.target.files[0];
         dispatch(change('profile', 'image', image));
-      }} />
+      }}
 
+    />
     </RaisedButton>
 <Snackbar value={this.state.open} />
     </div>
   </form>
     );
   }
-
 }
 
 Profilecreate = reduxForm({
