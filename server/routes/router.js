@@ -18,4 +18,6 @@ router.post('/profilecreate', controller.profileCreate);
 //get all profiles list database
 router.get('/listinstructors', controller.listinstructors);
 
+router.post('/test', upload.single('file'), controller.test);
+
 module.exports = router;

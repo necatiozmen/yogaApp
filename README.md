@@ -21,10 +21,9 @@ Yogapp helps people to find yoga studios and personel yoga instructors in 220 ci
 <hr>
 
 <div align="center">
- <img src="https://preview.ibb.co/hDpJd8/download_1.png" alt="download_1" border="0">
+ <img src="https://preview.ibb.co/iSqFd8/Screen_Shot_2018_05_20_at_22_28_07.png" alt="download_1" border="0">
 </div>
-
-<hr>
+<hr> 
 
 Clone and install the dependencies for the repo:
 
