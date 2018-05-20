@@ -37,7 +37,7 @@ Clone and install the dependencies for the repo:
 ### Client
 
 
-Go to the choosen app directory on the CLI then run this command into client folder
+Go to the choosen app directory on the CLI then run this command into client folder -
 
 `npm install`
 
