@@ -1,11 +1,11 @@
 
 
 <div align="center">
- <img width= "200px" src="https://cdn.pixabay.com/photo/2017/08/16/17/16/flower-of-life-2648527__340.png"></img>
+ <img width= "200px" src="https://preview.ibb.co/no0DD8/logo01.png" ></img>
 </div>
 
-
-
+<!-- <a href="https://ibb.co/dB2h6T"><img src="https://preview.ibb.co/no0DD8/logo01.png" alt="logo01" border="0"></a>
+src="https://cdn.pixabay.com/photo/2017/08/16/17/16/flower-of-life-2648527__340.png" -->
 ## About
 Yogapp helps people to find yoga studios and personel yoga instructors in 220 cities all around the world.
 
