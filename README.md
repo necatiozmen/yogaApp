@@ -84,6 +84,7 @@ After setting env file run this command on the CLI for start server running :
 
 * **React** - Front end library for building user interfaces
 * **Redux** - Storage to share data inside the app
+* **Material-UI** - React components that implement Google's Material Design.
 * **Yelp API** - Searching service
 * **Google Map API** - Google map
 * **Node / Express**- Back end web framework
