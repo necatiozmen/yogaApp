@@ -13,6 +13,7 @@ const profileSchema = new db.Schema({
   rate: { type: Number, default: Math.random() },
   refId: { type: Number },
   image: { data: Buffer, contentType: String },
+  imageUrl: { type: String },
 });
 
 const Profiles = db.mongoose.model('Profiles', profileSchema);
