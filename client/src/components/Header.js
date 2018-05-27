@@ -15,7 +15,7 @@ const Header = () => (
     <Tab
       icon={<FontIcon className="material-icons" >PERSONAL</FontIcon>}
       label="YOGA INSTRUCTORS"
-        containerElement={<Link to="/instructorlist" />}
+      containerElement={<Link to="/instructorlist" />}
     />
     <Tab
       icon={<FontIcon className="material-icons" >CREATE PROFILE</FontIcon>}

@@ -24,8 +24,8 @@ class InstructorChip extends Component {
     return (
       <div style={styles.wrapper}>
         <Chip
-          backgroundColor={teal50
-  }  style={styles.chip}
+          backgroundColor={teal50}
+          style={styles.chip}
         >
           <Avatar color="#444" icon={<SvgIconAcc/>} />
           {this.props.names} {this.props.surname}
@@ -33,8 +33,8 @@ class InstructorChip extends Component {
 
 
         <Chip
-          backgroundColor={teal50
-  }  style={styles.chip}
+          backgroundColor={teal50}
+          style={styles.chip}
         >
           <Avatar color="#444" icon={<SvgIconRoom />} />
           {this.props.city}
@@ -51,31 +51,32 @@ class InstructorChip extends Component {
 
 
         <Chip
-          backgroundColor={teal50
-  }  style={styles.chip}
+          backgroundColor={teal50}
+          style={styles.chip}
         >
           <Avatar color="#444" icon={<LocalPhone/>} />
           {this.props.phone}
         </Chip>
 
         <Chip
-          backgroundColor={teal50
-  }  style={styles.chip}
+          backgroundColor={teal50}
+          style={styles.chip}
         >
           <Avatar color="#444" icon={<Email/>} />
           {this.props.certification}
         </Chip>
 
         <Chip
-          backgroundColor={teal50
-  }  style={styles.chip}
+          backgroundColor={teal50}
+          style={styles.chip}
         >
           <Avatar color="#444" icon={<Money/>} />
           ${this.props.rate} / hour
         </Chip>
 
-        <Chip backgroundColor={teal50
-} style={styles.chip}>
+        <Chip backgroundColor={teal50}
+          style={styles.chip}
+          >
           <Avatar size={32}>pro</Avatar>
           {this.props.specialities.map((el, key, col) => col[key + 1] ? `${el}-` : `${el}`)}
         </Chip>

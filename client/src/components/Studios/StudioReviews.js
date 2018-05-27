@@ -36,27 +36,28 @@ export default class StudioReviews extends React.Component {
   renderReviews() {
     return this.state.reviews.map(review => (
       <div style={{ margin: '20px' }} key={review.id}>
-        <div style={{ margin: '20px' }}>{review.user.name}</div>
-      {review.time_created}  <Rating
-                 readOnly={true}
-                 value={review.rating}
-                 max={5}
-                 onChange={(value) => console.log(`Rated with value ${value}`)}
-               />
+      <div style={{ margin: '20px' }}>{review.user.name}</div>
+      {review.time_created}
+      <Rating
+         readOnly={true}
+         value={review.rating}
+         max={5}
+         onChange={(value) => console.log(`Rated with value ${value}`)}
+     />
         {review.text}</div>
     ));
   }
 
   render() {
     const actions = [
-   <div className="reviewdialog">{this.renderReviews()}</div>,
-      <FlatButton
-        label="OK"
-        primary={true}
-        keyboardFocused={true}
-        onClick={this.handleClose}
-      />,
-    ];
+       <div className="reviewdialog">{this.renderReviews()}</div>,
+          <FlatButton
+            label="OK"
+            primary={true}
+            keyboardFocused={true}
+            onClick={this.handleClose}
+          />,
+          ];
 
     return (
       <div>
