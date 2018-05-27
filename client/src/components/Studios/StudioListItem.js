@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { connect } from 'react-redux';
-import { setCoord } from '../actions';
-import StudioCard from '../views/studio-card';
-import '../index.css';
+import { setCoord } from '../../actions';
+import StudioCard from './StudioCard';
+import '../../index.css';
 
 class StudioListItem extends Component {
   sendcoor = (coords) => {

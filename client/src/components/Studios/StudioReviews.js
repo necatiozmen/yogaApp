@@ -8,7 +8,7 @@ import { lime500 } from 'material-ui/styles/colors';
 const customBodyStyle = {
   textalign: 'center',
 };
-export default class ReviewDialog extends React.Component {
+export default class StudioReviews extends React.Component {
   state = {
     open: false,
     alias: '',
@@ -17,7 +17,6 @@ export default class ReviewDialog extends React.Component {
   };
 
   handleOpen = () => {
-
       fetch('http://localhost:5000/reviews', {
         method: 'POST',
         body: JSON.stringify({ alias: this.props.alias }),
@@ -36,7 +35,7 @@ export default class ReviewDialog extends React.Component {
 
   renderReviews() {
     return this.state.reviews.map(review => (
-      <div style={{ margin: '20px' }} key= {review.id}>
+      <div style={{ margin: '20px' }} key={review.id}>
         <div style={{ margin: '20px' }}>{review.user.name}</div>
       {review.time_created}  <Rating
                  readOnly={true}
@@ -49,7 +48,6 @@ export default class ReviewDialog extends React.Component {
   }
 
   render() {
-
     const actions = [
    <div className="reviewdialog">{this.renderReviews()}</div>,
       <FlatButton
@@ -58,7 +56,6 @@ export default class ReviewDialog extends React.Component {
         keyboardFocused={true}
         onClick={this.handleClose}
       />,
-
     ];
 
     return (
@@ -67,7 +64,7 @@ export default class ReviewDialog extends React.Component {
         <Dialog
           actions={actions}
           modal={false}
-           style={customBodyStyle}
+          style={customBodyStyle}
           open={this.state.open}
           onRequestClose={this.handleClose}
         >

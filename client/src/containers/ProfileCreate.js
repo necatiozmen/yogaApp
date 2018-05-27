@@ -2,20 +2,18 @@ import React from 'react';
 import { Field, reduxForm, formValueSelector, change } from 'redux-form';
 import { connect } from 'react-redux';
 import '../App.css';
-import Header from '../views/header';
+import Header from '../components/Header';
 import axios from 'axios';
 import { RadioButton } from 'material-ui/RadioButton';
 import {
-  Checkbox,
   RadioButtonGroup,
   SelectField,
   TextField,
-  Toggle,
   DatePicker
 } from 'redux-form-material-ui';
 import RaisedButton from 'material-ui/RaisedButton';
 import MenuItem from 'material-ui/MenuItem';
-import Snackbar from './snackbar';
+import Snackbar from '../components/Snackbar';
 
 class Profilecreate extends React.Component {
   constructor(props) {
@@ -87,7 +85,7 @@ class Profilecreate extends React.Component {
     const divstyle = {
       padding: 10,
     };
-    const { handleSubmit, pristine, reset, submitting, rate, dispatch } = this.props;
+    const { handleSubmit, submitting } = this.props;
     return (
 <form onSubmit={ handleSubmit(this.myfunc)}>
   <Header />
