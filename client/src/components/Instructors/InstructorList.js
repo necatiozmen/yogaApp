@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import InstructorListItem from './instructor-list-item';
+import InstructorListItem from './InstructorListItem';
 
 class InstructorList extends Component {
   constructor(props) {

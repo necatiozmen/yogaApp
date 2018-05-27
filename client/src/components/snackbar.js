@@ -1,9 +1,7 @@
 import React from 'react';
-import Snackbar from 'material-ui/Snackbar';
-import RaisedButton from 'material-ui/RaisedButton';
+import SnackBar from 'material-ui/Snackbar';
 
-export default class SnackbarExampleSimple extends React.Component {
-
+export default class Snackbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,7 +12,7 @@ export default class SnackbarExampleSimple extends React.Component {
   render() {
     return (
       <div>
-        <Snackbar
+        <SnackBar
           open={this.props.value}
           message="Profile Created"
           autoHideDuration={2500}

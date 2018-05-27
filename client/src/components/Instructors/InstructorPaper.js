@@ -1,11 +1,7 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
-import CommunicationCall from 'material-ui/svg-icons/communication/call';
-import CommunicationEmail from 'material-ui/svg-icons/communication/email';
-import { indigo500 } from 'material-ui/styles/colors';
-import { Place } from '@material-ui/icons';
-import Chip from './profinfo.js';
+import InstructorChip from './InstructorChip';
 
 const style = {
   height: 300,
@@ -19,24 +15,19 @@ const style = {
 const imgstyle = {
   float: 'left',
   marginRight: 10,
-};
-const infostyle = {
-  float: 'left',
 
 };
 
-const PaperExampleSimple = (props) => (
-
+const InstructorPaper = (props) => (
     <Paper style={style} zDepth={3} rounded={false} >
-      <div  style={{
+      <div style={{
         margin: 25, }}>
-        <Avatar style={{
-          margin: 20, }}
+        <Avatar
          src={props.image}
          size={200}
          style={imgstyle}
        />
-      <Chip
+      <InstructorChip
       names = {props.names}
       surname = {props.surname}
       city = {props.city}
@@ -53,4 +44,4 @@ const PaperExampleSimple = (props) => (
 
 );
 
-export default PaperExampleSimple;
+export default InstructorPaper;

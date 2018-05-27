@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import InstructorCard from '../views/instructor-card';
-import PaperExampleSimple from '../views/instructor-paper';
+import InstructorPaper from './InstructorPaper';
 
 class InstructorListItem extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render () {
     const instructorItem = this.props.instructor;
     return (
      <div>
         <MuiThemeProvider>
-            <PaperExampleSimple
+            <InstructorPaper
               names = {instructorItem.name}
               surname = {instructorItem.surname}
               city = {instructorItem.city}
