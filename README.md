@@ -89,6 +89,7 @@ After setting env file run this command on the CLI for start server running :
 * **Google Map API** - Google map
 * **Node / Express**- Back end web framework
 * **MongoDB / Mongoose** - Database storage for Node
+* **Cloudinary** - Cloud-based image solution
 
 
 
