@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import '../App.css';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Header from '../views/header';
-import InstructorList from './instructor-list';
+import '../../App.css';
+import Header from '../Header';
+import InstructorList from './InstructorList';
 
 class Instructors extends Component {
 

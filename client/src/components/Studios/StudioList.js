@@ -1,7 +1,7 @@
 import React from 'react';
-import StudioListItem from './studio-list-item';
+import StudioListItem from './StudioListItem';
 import { connect } from 'react-redux';
-import '../App.css';
+import '../../App.css';
 
 const EmptyList = (props) =>
     (

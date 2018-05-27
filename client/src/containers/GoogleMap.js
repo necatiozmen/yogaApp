@@ -2,7 +2,6 @@ import React from 'react';
 import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 import { connect } from 'react-redux';
-const { MarkerClusterer } = require('react-google-maps/lib/components/addons/MarkerClusterer');
 
 const MyMapComponent = (props) =>
 
