@@ -15,13 +15,14 @@ class StudioListItem extends Component {
     return (
      <div  style={this.props.style} onClick={this.sendcoor}>
       <MuiThemeProvider>
-        <StudioCard images = {studioItem.image_url}
-           isclosed = {studioItem.is_closed}
-            names = {studioItem.name}
-            number = {studioItem.phone}
-            rating = {studioItem.rating}
-            adress = {studioItem.location}
-            alias = {studioItem.alias}
+        <StudioCard
+          images = {studioItem.image_url}
+          isclosed = {studioItem.is_closed}
+          names = {studioItem.name}
+          number = {studioItem.phone}
+          rating = {studioItem.rating}
+          adress = {studioItem.location}
+          alias = {studioItem.alias}
         />
        </MuiThemeProvider>
    </div>
