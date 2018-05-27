@@ -3,6 +3,7 @@ const Profiles = require('../models/profile-schema');
 const client = yelp.client(process.env.APIKEY);
 const multer  = require('multer');
 const fs = require('fs');
+
 require('dotenv').config();
 
 exports.searchStudios = (req, res) => {
@@ -41,6 +42,7 @@ exports.profileCreate = (req, res) => {
     datapicker: req.body.datepicker,
     experience: req.body.experience,
     rate: req.body.rate,
+    imageUrl: req.body.imageUrl,
   });
   newProfile.save()
   .then(profile => res.send(profile))
@@ -58,20 +60,6 @@ exports.listinstructors = (req, res) => {
   .catch(() => {
     res.status(500).send(
       'SERVICE UNAVAILABLE'
-    );
-  });
-};
-
-exports.test = (req, res) => {
-  console.log(req.file.path);
-  Profiles.findOneAndUpdate({ refId: req.query.id },
-  { image: { data: fs.readFileSync(req.file.path),
-    contentType: 'image/png', }, })
-  .then(profile => res.send(profile))
-  .then(() => res.status(201))
-  .catch(() => {
-    res.status(400).send(
-      'Parameters not accepted'
     );
   });
 };

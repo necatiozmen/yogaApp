@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { listStudios } from '../actions';
-// import SearchBar1 from 'material-ui-search-bar'
 
 class SearchBar extends Component {
   state = {

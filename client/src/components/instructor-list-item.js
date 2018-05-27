@@ -17,7 +17,7 @@ class InstructorListItem extends Component {
               names = {instructorItem.name}
               surname = {instructorItem.surname}
               city = {instructorItem.city}
-              image= {instructorItem.image}
+              image= {instructorItem.imageUrl}
               certification= {instructorItem.certification}
               language ={instructorItem.language}
               specialities = {instructorItem.specialities}
