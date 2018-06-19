@@ -7,6 +7,12 @@ class SearchBar extends Component {
       value: '',
     };
 
+  componentDidMount() {
+    if (this.input) {
+      this.input.focus();
+    }
+  }
+
   handleChange = (e) => {
     this.setState({ value: e.target.value });
   };
@@ -31,7 +37,8 @@ class SearchBar extends Component {
     <input value={this.state.value}
       onChange = {this.handleChange }
       placeHolder={'Please type the city name...'}
-      style={{ width: 900, height: 50, fontSize: 20, border: '2px solid #B2DFDB' }} >
+      style={{ width: 900, height: 50, fontSize: 20, border: '2px solid #B2DFDB' }}
+      ref= {(node) => { this.input = node; }} >
     </input>
   </form>
     );
